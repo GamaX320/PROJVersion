@@ -97,3 +97,19 @@ public void onCreate(Bundle savedInstanceState) {
                         .setTabListener(tabListener));
     }
 }
+
+//create by me 3333
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    ...
+
+    // Create a tab listener that is called when the user changes tabs.
+    ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+        public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+            // When the tab is selected, switch to the
+            // corresponding page in the ViewPager.
+            mViewPager.setCurrentItem(tab.getPosition());
+        }
+        ...
+    };
+}
